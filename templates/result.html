@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Prediction Result</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="result-page">
+
+    <div class="result-card">
+
+        {% if prediction == "Approved" %}
+
+        <div class="success">
+
+            <div class="icon success-icon">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+
+            <h1>Loan Approved</h1>
+
+            <p>
+                Congratulations! 🎉
+            </p>
+
+            <p class="message">
+                Based on the applicant information,
+                our Machine Learning model predicts that
+                the customer is eligible for loan approval.
+            </p>
+
+        </div>
+
+        {% else %}
+
+        <div class="failure">
+
+            <div class="icon failure-icon">
+                <i class="fa-solid fa-circle-xmark"></i>
+            </div>
+
+            <h1>Loan Rejected</h1>
+
+            <p>
+                Unfortunately!
+            </p>
+
+            <p class="message">
+                Based on the applicant information,
+                our Machine Learning model predicts that
+                the customer is not eligible for loan approval.
+            </p>
+
+        </div>
+
+        {% endif %}
+
+        <div class="info-box">
+
+            <div class="info">
+
+                <i class="fa-solid fa-brain"></i>
+
+                <span>
+                    Model Used :
+                    <b>Random Forest Classifier</b>
+                </span>
+
+            </div>
+
+            <div class="info">
+
+                <i class="fa-solid fa-chart-column"></i>
+
+                <span>
+                    Accuracy :
+                    <b>82%</b>
+                </span>
+
+            </div>
+
+            <div class="info">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                <span>
+                    Prediction completed successfully.
+                </span>
+
+            </div>
+
+        </div>
+
+        <a href="/" class="home-btn">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Predict Another Loan
+
+        </a>
+
+        <div class="info">
+            <i class="fa-solid fa-chart-pie"></i>
+            <span>
+                Prediction Confidence :
+                <b>{{ confidence }}%</b>
+            </span>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
