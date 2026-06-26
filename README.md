@@ -41,7 +41,7 @@ https://loan-prediction-system-i8op.onrender.com/
 
 ## ❌ Loan Rejected
 
-screenshots/rejected.png
+![rejected](screenshots/rejected.png)
 
 ⸻
 
