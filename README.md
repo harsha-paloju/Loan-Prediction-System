@@ -21,7 +21,7 @@ A complete end-to-end machine learning pipeline has been implemented, including:
 
 🚀 Live Demo
 
-Coming Soon (Render Deployment)
+https://loan-prediction-system-i8op.onrender.com/
 
 ⸻
 
@@ -41,7 +41,7 @@ Coming Soon (Render Deployment)
 
 ## ❌ Loan Rejected
 
-![Rejected](screenshots/rejected.png)
+screenshots/rejected.png
 
 ⸻
 
